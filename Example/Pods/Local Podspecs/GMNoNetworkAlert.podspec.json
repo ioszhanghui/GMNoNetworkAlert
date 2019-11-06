@@ -1,9 +1,9 @@
 {
   "name": "GMNoNetworkAlert",
   "version": "0.1.0",
-  "summary": "A short description of GMNoNetworkAlert.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/ioszhanghui@163.com/GMNoNetworkAlert",
+  "summary": "无网络时的 屏幕提示",
+  "description": "在 应用 第一次启动时，加载的第一个页面 无网络提示 在网络状态变化时  无网络提示页面 也会 加载",
+  "homepage": "https://github.com/ioszhanghui/GMNoNetworkAlert.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,10 @@
     "ioszhanghui@163.com": "yomingyo@gmail.com"
   },
   "source": {
-    "git": "https://github.com/ioszhanghui@163.com/GMNoNetworkAlert.git",
+    "git": "https://github.com/ioszhanghui/GMNoNetworkAlert.git",
     "tag": "0.1.0"
   },
   "prefix_header_contents": [
-    "#import <Masonry/Masonry.h>",
     "#import <Masonry/Masonry.h>",
     "#import <GMmacros/macros.h>",
     "#import <GMNetworkManager/GMNetworkManager.h>"
@@ -30,9 +29,6 @@
   "source_files": "GMNoNetworkAlert/Classes/**/*",
   "dependencies": {
     "Masonry": [
-
-    ],
-    "ReactiveObjC": [
 
     ],
     "GMmacros": [
