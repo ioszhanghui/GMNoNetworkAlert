@@ -7,14 +7,70 @@
 //
 
 #import "GMAppDelegate.h"
+#import "GMNetworkManager.h"
+#import "UIViewController+Network.h"
+
 
 @implementation GMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    [GMNetworkManager startNetworkNotifier];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(networkChange:) name:kReachabilityChangedNotification object:nil];
+    
+    [self addFirstShow];    
+   
     return YES;
 }
+
+-(void)addFirstShow{
+    if (![GMNetworkManager shareNetworkManager].availableNetwork) {
+        [[self getCurrentViewController]showNetWorkAlert];
+    }
+}
+
+-(void)networkChange:(NSNotification*)noti{
+    
+    if (![GMNetworkManager shareNetworkManager].availableNetwork) {
+        //获取的 网络
+        [[self getCurrentViewController]showNetWorkAlert];
+        
+    }else{
+        [[self getCurrentViewController]hiddenNetworkAlert];
+    }
+}
+/*获取当前控制器*/
+-(UIViewController *)getCurrentViewController{
+    UIViewController * rootViewController = [self getApplicationDelegate].window.rootViewController;
+    return [self getCurrentControllerFrom:rootViewController];
+}
+
+/*从一个控制器 当中拿到当前控制器啊*/
+-(UIViewController*)getCurrentControllerFrom:(UIViewController*)viewController{
+    
+    if([viewController isKindOfClass:[UINavigationController class]]){
+        //如果是导航控制器
+        UINavigationController * nviController = (UINavigationController*)viewController;
+        return [nviController.viewControllers lastObject];
+    }else if ([viewController isKindOfClass:[UITabBarController class]]){
+        //如果当前控制器是 Tabbar
+        UITabBarController * tabbarController =(UITabBarController*)viewController;
+        return [self getCurrentControllerFrom:tabbarController.selectedViewController];
+    }else if (viewController.presentedViewController != nil){
+        //如果当前是 普通的控制器
+        return [self getCurrentControllerFrom:viewController.presentedViewController];
+    }
+    return viewController;
+}
+
+
+-(id<UIApplicationDelegate>)getApplicationDelegate{
+    return [UIApplication sharedApplication].delegate;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

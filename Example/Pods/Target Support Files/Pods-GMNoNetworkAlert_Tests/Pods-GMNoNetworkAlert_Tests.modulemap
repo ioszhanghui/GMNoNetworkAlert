@@ -1,0 +1,6 @@
+module Pods_GMNoNetworkAlert_Tests {
+  umbrella header "Pods-GMNoNetworkAlert_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

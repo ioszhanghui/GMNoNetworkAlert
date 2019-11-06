@@ -8,6 +8,8 @@
 
 @import UIKit;
 
+extern NSString *const kReachabilityChangedNotification;
+
 @interface GMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

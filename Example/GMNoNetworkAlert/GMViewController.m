@@ -7,6 +7,7 @@
 //
 
 #import "GMViewController.h"
+#import "UIViewController+Network.h"
 
 @interface GMViewController ()
 
@@ -17,13 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.networkClickBlock = ^{
+        NSLog(@"刷新网络");
+    };
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end

@@ -1,0 +1,6 @@
+framework module GMNoNetworkAlert {
+  umbrella header "GMNoNetworkAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

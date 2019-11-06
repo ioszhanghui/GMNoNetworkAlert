@@ -1,0 +1,48 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - GMmacros (0.1.0)
+  - GMNetworkManager (0.1.0):
+    - Reachability
+  - GMNoNetworkAlert (0.1.0):
+    - GMmacros
+    - GMNetworkManager
+    - Masonry
+    - ReactiveObjC
+  - Masonry (1.1.0)
+  - Reachability (3.2)
+  - ReactiveObjC (3.1.1)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - GMNoNetworkAlert (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+    - Masonry
+    - Reachability
+    - ReactiveObjC
+  https://github.com/ioszhanghui/GMPublicRepo.git:
+    - GMmacros
+    - GMNetworkManager
+
+EXTERNAL SOURCES:
+  GMNoNetworkAlert:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GMmacros: 2f5feff28e116006525dc58ccb393b77e4921e6d
+  GMNetworkManager: 1ddc33a77cdaf00b4dbebf10a30123fbbeef3398
+  GMNoNetworkAlert: 86ac793c0f4b4e66a56004dca81ffc10c2d68cf5
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+
+PODFILE CHECKSUM: 0e34c9280af1acf9ccaa2e695be40251d39cb828
+
+COCOAPODS: 1.5.3

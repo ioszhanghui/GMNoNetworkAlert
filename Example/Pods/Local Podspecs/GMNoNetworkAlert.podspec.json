@@ -1,0 +1,45 @@
+{
+  "name": "GMNoNetworkAlert",
+  "version": "0.1.0",
+  "summary": "A short description of GMNoNetworkAlert.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ioszhanghui@163.com/GMNoNetworkAlert",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ioszhanghui@163.com": "yomingyo@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/ioszhanghui@163.com/GMNoNetworkAlert.git",
+    "tag": "0.1.0"
+  },
+  "prefix_header_contents": [
+    "#import <Masonry/Masonry.h>",
+    "#import <Masonry/Masonry.h>",
+    "#import <GMmacros/macros.h>",
+    "#import <GMNetworkManager/GMNetworkManager.h>"
+  ],
+  "platforms": {
+    "ios": "9.0"
+  },
+  "resources": [
+    "GMNoNetworkAlert/Assets/*.png"
+  ],
+  "source_files": "GMNoNetworkAlert/Classes/**/*",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "ReactiveObjC": [
+
+    ],
+    "GMmacros": [
+
+    ],
+    "GMNetworkManager": [
+
+    ]
+  }
+}

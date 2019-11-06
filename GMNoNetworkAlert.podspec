@@ -27,10 +27,16 @@ TODO: Add long description of the pod here.
   s.author           = { 'ioszhanghui@163.com' => 'yomingyo@gmail.com' }
   s.source           = { :git => 'https://github.com/ioszhanghui@163.com/GMNoNetworkAlert.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  
+    s.prefix_header_contents = '#import <Masonry/Masonry.h>','#import <Masonry/Masonry.h>','#import <GMmacros/macros.h>','#import <GMNetworkManager/GMNetworkManager.h>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
+  s.resources = ['GMNoNetworkAlert/Assets/*.png']
 
   s.source_files = 'GMNoNetworkAlert/Classes/**/*'
+  s.dependency 'Masonry'
+  s.dependency 'GMmacros'
+  s.dependency 'GMNetworkManager'
   
   # s.resource_bundles = {
   #   'GMNoNetworkAlert' => ['GMNoNetworkAlert/Assets/*.png']
