@@ -31,6 +31,9 @@ Pod::Spec.new do |s|
     s.prefix_header_contents = '#import <Masonry/Masonry.h>','#import <GMmacros/macros.h>','#import <GMNetworkManager/GMNetworkManager.h>'
 
   s.ios.deployment_target = '9.0'
+  
+  s.requires_arc = true
+  
   s.resources = ['GMNoNetworkAlert/Assets/*.png']
 
   s.source_files = 'GMNoNetworkAlert/Classes/**/*'
